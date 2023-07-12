@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>간단한 채팅</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+    /* 스타일 설정 */
+    :root {
+      --bg-color: #111;
+      --text-color: #fff;
+      --message-bg: #222;
+      --user-message-bg: #949494;
+      --bot-message-bg: #700000;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    .chat-container {
+      height: 400px;
+      overflow-y: scroll;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: var(--message-bg);
+    }
+
+    .message {
+      background-color: var(--message-bg);
+      padding: 10px;
+      margin-bottom: 5px;
+    }
+
+    .user-message {
+      background-color: var(--user-message-bg);
+    }
+
+    .bot-message {
+      background-color: var(--bot-message-bg);
+    }
+
+    .input-container {
+      margin-top: 10px;
+    }
+
+    input, button {
+      background-color: var(--message-bg);
+      color: var(--text-color);
+    }
+  </style>
+</head>
+<body>
+<h1>간단한 채팅</h1>
+
+<div class="chat-container" id="chatContainer"></div>
+
+<div class="input-container">
+    <input type = "text" id = "messageInput" placeholder = "메시지를 입력하세요">
+    <button type = "button">전송</button>
+</div>
+
+<script>
+    function sendMessage() {
+        location.href = "/sendMessage";
+    }
+</script>
+</body>
+</html>
